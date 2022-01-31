@@ -1,9 +1,9 @@
 {
-  "name": "Alcatraz-Bot",
+  "name": "Dragón-Bot",
   "version": "2.1.0",
   "main": "index.js",
   "contributors": [
-    "ALCATRAZ-TEAM"
+    "DRAGÓN-TEAM"
   ],
   "directories": {
     "lib": "lib"

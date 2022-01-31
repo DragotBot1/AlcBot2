@@ -37,7 +37,7 @@ cnf.autoReconnect = ReconnectMode.onConnectionLost
      
       await cnf.connect({ timeoutMs: 30 * 1000 });
   fs.writeFileSync("./qr.json",JSON.stringify(cnf.base64EncodedAuthInfo(), null, "\t"));
-  console.log(color(figlet.textSync('𝚲𝐋⃖͢𝐂𝚫𝐓𝐑⃖͢͢𝚲𝐙『 𝟐ྂ.⃪࿆𝟎࿆ྂ 』𝐁͢𝚯⃖𝐓', {
+  console.log(color(figlet.textSync('DRAGON『 𝟐ྂ.⃪࿆𝟎࿆ྂ 』BOT', {
 font: 'Standard',
 horizontalLayout: 'default',
 vertivalLayout: 'default',
@@ -45,7 +45,7 @@ width: 80,
 whitespaceBreak: false
 }), 'cyan'))
 console.log(color(`╔═════════════════════════╗` ,'white'))
-console.log(color(`║ ` ,'white'), color(`✹ 𝚲𝐋⃖͢𝐂𝚫𝐓𝐑⃖͢͢𝚲𝐙 𝟐ྂ.⃪࿆𝟎࿆ྂ ✹`, 'gold'))
+console.log(color(`║ ` ,'white'), color(`✹ DRAGÓN 𝟐ྂ.⃪࿆𝟎࿆ྂ ✹`, 'gold'))
 console.log(color(`╠═════════════════════════╩═════════════════════════╗`, 'white'))
 console.log(color(`║ `, 'white'), color(`[•]`, 'gold'), color(`Hola        : Usuario                        ║`, 'white'))
 console.log(color(`║ `, 'white'), color(`[•]`, 'gold'), color(`Estado      : Online!                        ║`, 'white'))
@@ -125,7 +125,7 @@ if (anu.action == 'add' && !mem.includes(cnf.user.jid)) {
                 anu_user = v.vname || v.notify || num.split('@')[0]
                 time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
-                teks = `🌿 *Hoʟa* @${num.split('@')[0]}\n🌿 *Bɪᴏ* : *${thu.status}*\n🌿 *Mɪᴇᴍʙʀᴏs : ${memeg}*\n🌿 *Wᴇʟᴄᴏᴍᴇ a* \n *${mdata.subject}*\n🐢 *Lee la descripción*`
+                teks = `🌿 *Hoʟa pvto* @${num.split('@')[0]}\n🌿 *Bɪᴏ* : *${thu.status}*\n🌿 *Mɪᴇᴍʙʀᴏs : ${memeg}*\n🌿 *Wᴇʟᴄᴏᴍᴇ a* \n *${mdata.subject}*\n🐢 Evita hacer mamadas, mejor damelas:)`
                 welcomeBut = [{buttonId:`getdeskgc`,buttonText:{displayText:'DESCRIPCION'},type:1}]
                 welcomeButt = { contentText: ` `, footerText: `${teks}`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
                 cnf.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
@@ -146,7 +146,7 @@ if (anu.action == 'add' && !mem.includes(cnf.user.jid)) {
         let buffer = await getBuffer(
           `https://api-yogipw.herokuapp.com/api/promote?name=${anu_user}&msg=Ahora%20eres%20admin&mem=${groupAdmins.length}&picurl=${ppimg}&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg`
         );
-        teks = `${anu_user} As sido promovido a administrador🐢`;
+        teks = `${anu_user} has sido promovido a administrador🐢`;
         cnf.sendMessage(mdata.id, buffer, MessageType.image, {
           caption: teks,
         });
@@ -169,7 +169,7 @@ if (anu.action == 'add' && !mem.includes(cnf.user.jid)) {
         let buffer = await getBuffer(
           `https://api-yogipw.herokuapp.com/api/demote?name=${anu_user}&msg=Ya%20no%20eres%20admin&mem=${groupAdmins.length}&picurl=${ppimg}&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg`
         );
-        teks = `${anu_user} As sido degradado a usuario comun😂`;
+        teks = `${anu_user} has sido degradado a usuario comun😂`;
         cnf.sendMessage(mdata.id, buffer, MessageType.image, {
           caption: teks,
         });
@@ -179,7 +179,7 @@ if (anu.action == 'add' && !mem.includes(cnf.user.jid)) {
     }
   });	cnf.on('group-update', async (anu) => {
 		const metdata = await cnf.groupMetadata(anu.jid)
-    	const fkontakk = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(anu.jid ? { remoteJid: '6283136505591-1604595598@g.us' } : {})}, message: { "contactMessage":{"displayName": `${metdata.subject}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;cnf;;;\nFN:cnf\nitem1.TEL;waid=51923568749:51923568749\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}
+    	const fkontakk = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(anu.jid ? { remoteJid: '6283136505591-1604595598@g.us' } : {})}, message: { "contactMessage":{"displayName": `${metdata.subject}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;cnf;;;\nFN:cnf\nitem1.TEL;waid=529626063383:529626063383\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}
     if(anu.announce == 'false'){
     teks = `- [ Grupo Abierto ] -\n\n_El grupo ha sido abierto por el administrador_\n_Ahora todos los miembros pueden enviar mensajes_`
     cnf.sendMessage(metdata.id, teks, MessageType.text, {quoted: fkontakk})
